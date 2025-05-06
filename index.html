@@ -1,1 +1,321 @@
-<!DOCTYPE html><html><head><title>My Site</title></head><body><h1>Hello, I'm Jcabelic!</h1></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerson Cabelic | ERP Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- Slick Carousel CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+  <link rel="stylesheet" type="text/css" href="assets/slick.css"/>
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+  <link rel="stylesheet" type="text/css" href="assets/slick-theme.css"/>
+  <!-- jQuery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="assets/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel JS -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+  <script type="text/javascript" src="assets/slick.min.js"></script>
+  <!-- AOS CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+  <link href="assets/aos.css" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+  <script src="assets/aos.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      duration: 800, // animation duration in ms
+    //   once: true     // only animate once
+    });
+  });
+</script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Jerson</h1>
+      
+      <!-- Mobile menu toggle -->
+      <button id="menuBtn" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Navigation -->
+      <nav id="navMenu" class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
+      <!-- <nav id="navMenu" class="hidden md:flex md:space-x-6 text-sm font-medium text-zinc-800 dark:text-zinc-200"> -->
+        <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
+        <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
+        <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+        <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
+        <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
+        <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600">
+          ☀️/🌙
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav dropdown -->
+    <div id="mobileNav" class="md:hidden px-6 pb-4 hidden flex-col space-y-2 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+      <a href="#About">About</a>
+      <a href="#Proficiencies">Proficiencies</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Endorsements">Testimonials</a>
+      <a href="#Contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- About-->
+  <section id="About" class=" pt-16 max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">About Me</h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Passionate about software development and building real-world solutions. I love solving business problems with clean, efficient code. Currently exploring cloud tech and aiming to contribute to projects that make a difference.
+      </p>
+    </div>
+  </section>
+
+  <section id="Proficiencies" class=" max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up">
+    <!-- <h2 class="text-3xl font-bold mb-4">Proficiencies</h2>
+    <ul class="list-disc pl-6">
+      <li>PHP / Laravel</li>
+      <li>MySQL, PostgreSQL</li>
+      <li>JavaScript / React / Tailwind</li>
+      <li>Cloud & DevOps Tools</li>
+    </ul> -->
+        <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Tech Stack</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- Skill badges -->
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">PHP</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">MySQL</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">JavaScript</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Tailwind CSS</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">React</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Supabase</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Linux</span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="Projects" class=" max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
+    <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Repeat this block per project -->
+            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6">
+            <h4 class="text-xl font-semibold mb-2">Employee Payroll System</h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Built with PHP & Supabase | Includes role-based access, geofencing, and CSV import.</p>
+            <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">View Project →</a>
+            </div>
+            <!-- ... Add more project cards -->
+        </div>
+    </div>
+  </section>
+
+  <section id="Endorsements" class=" bg-gray-100 dark:bg-gray-800 h-[100vh]" data-aos="fade-up">
+    <!-- <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center">Testimonials</h2>
+      <div class="testimonial-carousel">
+        <div class="px-4">
+          <div class="bg-white dark:bg-zinc-700 p-6 rounded-lg shadow text-center">
+            <p>“Jerson is a reliable engineer who always delivers quality work.”</p>
+            <span class="block mt-4 font-semibold">– Anna, HR Manager</span>
+          </div>
+        </div>
+        <div class="px-4">
+          <div class="bg-white dark:bg-zinc-700 p-6 rounded-lg shadow text-center">
+            <p>“He automated our payroll and reduced processing time by 80%.”</p>
+            <span class="block mt-4 font-semibold">– Mark, CEO</span>
+          </div>
+        </div>
+        <div class="px-4">
+          <div class="bg-white dark:bg-zinc-700 p-6 rounded-lg shadow text-center">
+            <p>“Exceptional attention to detail and great communication.”</p>
+            <span class="block mt-4 font-semibold">– Rose, Project Lead</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="px-4 sm:px-10 mt-20 lg:mt-28">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+          <div class="col-span-2">
+            <h2 class="md:text-5xl text-3xl font-bold mb-6 text-gray-900">
+              Trusted by Industry Leaders
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Join with known companies revolutionizing their operations with our platform. 
+              <br>Here's what some of our notable clients have to say about their experience.
+            </p>
+          </div>
+        </div>
+    
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+            
+            <p class="mt-6 text-gray-700 leading-relaxed italic">
+              "His sharp analytical skills and attention to detail are truly impressive."
+            </p>
+            <div class="flex items-center">
+              <img src="https://readymadeui.com/team-1.webp" 
+                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
+                   alt="John Doe" />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Management Information System Administrator</h4>
+                <p class="text-sm text-gray-500 mt-1">LPUB</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+            
+            <p class="mt-6 text-gray-700 leading-relaxed italic">
+              "Reliable in troubleshooting and has an "always willing to help" attitude."
+            </p>
+            <div class="flex items-center">
+              <img src="https://readymadeui.com/team-2.webp" 
+                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
+                   alt="Mark Adair" />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">Payroll Specialist</h4>
+                <p class="text-sm text-gray-500 mt-1">G.A. Jocson</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+            
+            <p class="mt-6 text-gray-700 leading-relaxed italic">
+              "Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success."
+            </p>
+            <div class="flex items-center">
+              <img src="https://readymadeui.com/team-3.webp" 
+                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
+                   alt="Simon Konecki" />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">IT Director</h4>
+                <p class="text-sm text-gray-500 mt-1">MCU</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+            
+            <p class="mt-6 text-gray-700 leading-relaxed italic">
+              "Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated."
+            </p>
+            <div class="flex items-center">
+              <img src="https://readymadeui.com/team-3.webp" 
+                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
+                   alt="Simon Konecki" />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">ERP Operations Officer</h4>
+                <p class="text-sm text-gray-500 mt-1">PWU</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+            
+            <p class="mt-6 text-gray-700 leading-relaxed italic">
+              "Takes a while to resolve problems and queries but he communicates when needed."
+            </p>
+            <div class="flex items-center">
+              <img src="https://readymadeui.com/team-3.webp" 
+                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
+                   alt="Simon Konecki" />
+              <div class="ml-4">
+                <h4 class="font-bold text-gray-900">System Administrator</h4>
+                <p class="text-sm text-gray-500 mt-1">CSA Binan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div>
+  <section id="Contact" class="py-16 max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
+    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+    <p>Email me at: <a href="mailto:youremail@example.com" class="text-teal-500">youremail@example.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 dark:text-black py-6 bg-gray-900 dark:bg-white text-white dark:text-white-200 font-sans transition-colors duration-300">
+    © 2025 Jerson Cabelic. Built with 💻 and ☕.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Dark mode
+    document.getElementById('toggleDark').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    });
+
+    // Slick carousel init
+    $(document).ready(function () {
+      $('.testimonial-carousel').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+
+  <!-- Animations (optional) -->
+  <style>
+    .animate-fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+</body>
+</html>
