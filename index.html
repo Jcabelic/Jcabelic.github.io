@@ -49,77 +49,81 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
 
-  <!-- Header -->
-  <header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Jerson</h1>
-      
-      <!-- Mobile menu toggle -->
-      <button id="menuBtn" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
-        ☰
-      </button>
+<header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"> <!-- Changed max-w-7xl to 5xl -->
+    <h1 class="text-2xl font-bold">Jerson</h1>
+    
+    <!-- Mobile menu toggle -->
+    <button id="menuBtn" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
+      ☰
+    </button>
 
-      <!-- Navigation -->
-      <nav id="navMenu" class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
-      <!-- <nav id="navMenu" class="hidden md:flex md:space-x-6 text-sm font-medium text-zinc-800 dark:text-zinc-200"> -->
-        <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
-        <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
-        <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
-        <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
-        <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
-      </nav>
+    <!-- Navigation -->
+    <nav id="navMenu" class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
+      <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
+      <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
+      <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+      <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
+      <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
+    </nav>
 
-      <!-- Icons -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
-        <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600">
-          ☀️/🌙
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile nav dropdown -->
-    <div id="mobileNav" class="md:hidden px-6 pb-4 hidden flex-col space-y-2 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-      <a href="#About">About</a>
-      <a href="#Proficiencies">Proficiencies</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Endorsements">Testimonials</a>
-      <a href="#Contact">Contact</a>
-    </div>
-  </header>
-
-
-  <!-- About -->
-<!-- <section id="About" class="pt-16 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
-  <div class="px-6 sm:py-20 py-10">
-    <div class="max-w-screen-xl mx-auto text-center">
-      <h1 class="text-slate-900 text-5xl max-sm:text-3xl font-bold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:bg-blue-600 after:left-0 after:right-0 after:mx-auto after:rounded-full leading-tight mb-6">Hi, I'm Jerson Cabelic</h1>
-      <p class="text-lg text-gray-500 mb-12 pt-3">
-        A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
-      </p>
-      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out">
-        Know more
+    <!-- Icons -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
+      <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600">
+        ☀️/🌙
       </button>
     </div>
   </div>
-</section> -->
+
+  <!-- Enhanced Mobile nav dropdown -->
+  <div id="mobileNav" class="md:hidden px-6 pb-4 hidden flex-col space-y-4 mt-4">
+    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
+      <a href="#About" class="block hover:text-teal-500 dark:hover:text-teal-400">About</a>
+    </div>
+    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
+      <a href="#Proficiencies" class="block hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
+    </div>
+    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
+      <a href="#Projects" class="block hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+    </div>
+    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
+      <a href="#Endorsements" class="block hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
+    </div>
+    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
+      <a href="#Contact" class="block hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
+    </div>
+  </div>
+</header>
+
 <!-- About -->
 <section id="About" class="pt-16 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
   <div class="px-6 sm:py-20 py-10">
-    <div class="max-w-screen-xl mx-auto text-center">
-      <h1 class="text-5xl max-sm:text-3xl font-bold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:left-0 after:right-0 after:mx-auto after:rounded-full leading-tight mb-6 text-slate-900 dark:text-white after:bg-gray-900 dark:after:bg-white">
+    <div class="max-w-screen-xl mx-auto ">
+      <!-- <h1 class="text-5xl max-sm:text-3xl font-bold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:left-0 after:right-0 after:mx-auto after:rounded-full leading-tight mb-6 text-slate-900 dark:text-white after:bg-gray-900 dark:after:bg-white">
         Hi, I'm Jerson Cabelic
       </h1>
       <p class="text-lg text-gray-900 mb-12 pt-3 dark:text-white">
         A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
-      </p>
-      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900">
+      </p> -->
+      <h1 class="text-4xl font-bold text-slate-900 dark:text-white">
+    Hi, I'm Jerson Cabelic
+  </h1>
+  <hr class="w-48 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4">
+  <p class="mt-4 text-gray-700 dark:text-gray-300 text-left">
+  A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
+    <!-- About me content goes here. -->
+  </p>
+      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
         Know more
       </button>
     </div>
   </div>
 </section>
+
+
+
 
   
 
@@ -135,6 +139,9 @@
       <h3 class="text-3xl font-bold text-center mb-12">Tech Stack</h3>
       <div class="flex flex-wrap justify-center gap-4">
         <!-- Skill badges -->
+        <marquee class="mt-6 text-base font-italic" behavior="scroll" direction="left" scrollamount="10">
+    
+      
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">PHP</span>
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">MySQL</span>
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">JavaScript</span>
@@ -143,6 +150,7 @@
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Supabase</span>
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Linux</span>
         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Git</span>
+        </marquee>
       </div>
     </div>
   </section>
@@ -164,7 +172,7 @@
 
   <section id="Endorsements" class=" bg-gray-100 dark:bg-gray-800 h-[100vh]" data-aos="fade-up">
 
-    <div class="px-4 sm:px-10 mt-20 lg:mt-28">
+    <!-- <div class="px-4 sm:px-10 mt-20 lg:mt-28">
       <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8 items-start">
           <div class="col-span-2">
@@ -179,7 +187,6 @@
         </div>
     
         <div class="grid md:grid-cols-3 gap-8 mt-12">
-          <!-- Testimonial 1 -->
           <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
             
             <p class="mt-6 text-gray-700 leading-relaxed italic">
@@ -196,7 +203,6 @@
             </div>
           </div>
     
-          <!-- Testimonial 2 -->
           <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
             
             <p class="mt-6 text-gray-700 leading-relaxed italic">
@@ -213,7 +219,6 @@
             </div>
           </div>
     
-          <!-- Testimonial 3 -->
           <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
             
             <p class="mt-6 text-gray-700 leading-relaxed italic">
@@ -263,7 +268,142 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="p-4 max-w-6xl mx-auto">
+  <div class="max-w-2xl w-full">
+    <h2 class="text-slate-900 text-2xl font-bold break-words">
+      What our happy clients say
+    </h2>
+    <p class="text-sm text-slate-500 mt-4 leading-relaxed break-words">
+      Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit.
+    </p>
+  </div>
+
+  <!-- Carousel Container -->
+  <div class="testimonial-carousel mt-12">
+    <!-- Repeat testimonial cards -->
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6 max-w-full w-full">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">John Doe</h6>
+            <p class="text-xs text-slate-500 mt-1">CEO, Company</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive.
+          </p>
+        </div>
+      </div>
     </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Jane Smith</h6>
+            <p class="text-xs text-slate-500 mt-1">CMO, Another Co</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            I love how quick and efficient the whole process was. A truly professional experience from start to finish.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
+            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
+            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
+            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat similar cards -->
+    <!-- ... your other cards ... -->
+  </div>
+</div>
+
+<!-- Slick Init Script -->
+<script>
+  $(document).ready(function(){
+    $('.testimonial-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '160px', // For large screens
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            centerMode: true,
+            centerPadding: '40px'
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false,
+            centerPadding: '0px'
+          }
+        }
+      ]
+    });
+  });
+</script>
   </section>
   <div>
   <section id="Contact" class="py-16 max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
