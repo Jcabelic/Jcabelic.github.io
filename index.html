@@ -46,6 +46,8 @@
     });
   });
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
 
@@ -98,15 +100,27 @@
 </header>
 
 <!-- About -->
-<section id="About" class="pt-16 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
+<!-- <section id="About" class="pt-16 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
   <div class="px-6 sm:py-20 py-10">
     <div class="max-w-screen-xl mx-auto ">
-      <!-- <h1 class="text-5xl max-sm:text-3xl font-bold relative after:absolute after:-bottom-5 after:h-1 after:w-1/2 after:left-0 after:right-0 after:mx-auto after:rounded-full leading-tight mb-6 text-slate-900 dark:text-white after:bg-gray-900 dark:after:bg-white">
-        Hi, I'm Jerson Cabelic
-      </h1>
-      <p class="text-lg text-gray-900 mb-12 pt-3 dark:text-white">
-        A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
-      </p> -->
+      <h1 class="text-4xl font-bold text-slate-900 dark:text-white">
+    Hi, I'm Jerson Cabelic
+  </h1>
+  <hr class="w-48 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4">
+  <p class="mt-4 text-gray-700 dark:text-gray-300 text-left">
+  A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
+    
+  </p>
+      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
+        Know more
+      </button>
+    </div>
+  </div>
+</section> -->
+<section class="pt-8 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
+  <div class="px-6 sm:py-4 py-2">
+    <div class="max-w-screen-xl mx-auto ">
+      
       <h1 class="text-4xl font-bold text-slate-900 dark:text-white">
     Hi, I'm Jerson Cabelic
   </h1>
@@ -115,56 +129,307 @@
   A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
     <!-- About me content goes here. -->
   </p>
-      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
+      <button   type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
         Know more
       </button>
     </div>
   </div>
+  <div class="p-4 max-w-6xl mx-auto">
+  <div class="max-w-2xl w-full">
+    <h2 class="text-slate-900 text-2xl font-bold break-words">
+        Endorsed by Professionals Who Rely on Results
+    </h2>
+        Here's what some of our notable clients have to say about the impact of my work on their operations.
+    </p>
+  </div>
+
+  <!-- Carousel Container -->
+  <div class="testimonial-carousel mt-4">
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-3 max-w-full w-full">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Management Information System Administrator</h6>
+            <p class="text-xs text-slate-500 mt-1">Lyceum of the Philippines, Batangas</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            "His sharp analytical skills and attention to detail are truly impressive."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">Payroll Specialist</h6>
+            <p class="text-xs text-slate-500 mt-1">G.A. Jocson</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            "Reliable in troubleshooting and has an "always willing to help" attitude."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">IT Director</h6>
+            <p class="text-xs text-slate-500 mt-1">Manila Central University</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            "Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">ERP Operations Officer</h6>
+            <p class="text-xs text-slate-500 mt-1">Philippine Women's University</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+            "Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="testimonial-card border bg-white rounded-xl p-6">
+        <div class="flex items-center">
+          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+          <div class="ml-4">
+            <h6 class="text-slate-900 text-sm font-semibold">System Administrator</h6>
+            <p class="text-xs text-slate-500 mt-1">Colegio San Agustin, Binan</p>
+          </div>
+        </div>
+        <hr class="border-2 border-gray-200 rounded-full mt-6">
+        <div class="mt-6">
+          <p class="text-slate-700 text-sm leading-relaxed">
+          "Takes a while to resolve problems and queries but he communicates when needed."
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat similar cards -->
+    <!-- ... your other cards ... -->
+  </div>
+</div>
+
+<!-- Slick Init Script -->
+<script>
+    
+  $(document).ready(function(){
+    $('.testimonial-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      centerMode: true,
+      autoplay: true,              // Enable autoplay
+      autoplaySpeed: 2000,         // Delay between slides in ms (3000ms = 3s)
+      centerPadding: '160px', // For large screens
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            centerMode: true,
+            centerPadding: '40px'
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false,
+            centerPadding: '0px'
+          }
+        }
+      ]
+    });
+  });
+</script>
 </section>
 
 
-
-
-  
-
-  <section id="Proficiencies" class=" max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up">
-    <!-- <h2 class="text-3xl font-bold mb-4">Proficiencies</h2>
-    <ul class="list-disc pl-6">
-      <li>PHP / Laravel</li>
-      <li>MySQL, PostgreSQL</li>
-      <li>JavaScript / React / Tailwind</li>
-      <li>Cloud & DevOps Tools</li>
-    </ul> -->
+  <section id="Proficiencies" class=" max-w-5xl mx-auto px-36 h-[60vh]" data-aos="fade-up">
+    
         <div class="max-w-6xl mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-12">Tech Stack</h3>
       <div class="flex flex-wrap justify-center gap-4">
-        <!-- Skill badges -->
+        
         <marquee class="mt-6 text-base font-italic" behavior="scroll" direction="left" scrollamount="10">
     
       
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">PHP</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Laravel</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">MySQL</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">PostgreSQL</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">JavaScript</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">TypeScript</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Tailwind CSS</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">JQuery</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">JQuery UI</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">React</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Supabase</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Linux</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Git</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">AWS Lambda</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Amazon S3, EBS & AWS RDS</span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Google Cloud</span> 
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Google Analytics</span> 
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Odoo</span> 
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-php-plain colored text-lg">PHP</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-laravel-plain colored text-lg">Laravel</i>
+          </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-mysql-original colored">MySQL</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-postgresql-plain colored">PostgreSQL</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-javascript-plain colored">JavaScript</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-typescript-plain colored">TypeScript</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-tailwindcss-original colored">Tailwind CSS</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-bootstrap-plain colored">Bootstrap</i>
+        </span>
+        
+          
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-jquery-plain-wordmark colored">JQuery</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-react-original colored">React</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-supabase-plain colored">Supabase</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-linux-plain">Linux</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-bash-plain colored">Bash</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-git-plain colored">Git</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-github-original colored">Github</i>
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-amazonwebservices-plain-wordmark colored">Lambda</i>
+         </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-amazonwebservices-plain-wordmark colored">S3, EBS & RDS</i>
+         </span>
+         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-dynamodb-plain colored">AWS dynamoDB</i>
+         </span>
+         
+          
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
+          <i class="devicon-amazonwebservices-plain-wordmark colored">Google Cloud</i>
+        </span> 
+        <!-- <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Google Analytics</span> 
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Odoo</span>  -->
         </marquee>
       </div>
     </div>
   </section>
-
+  <!-- <section id="Proficiencies" class="max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <div class="py-8 ">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-php-plain colored text-lg"></i>
+          PHP
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-laravel-plain colored text-lg"></i>
+          Laravel
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-mysql-plain colored text-lg"></i>
+          MySQL
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-postgresql-plain colored text-lg"></i>
+          PostgreSQL
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-javascript-plain colored text-lg"></i>
+          JavaScript
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-typescript-plain colored text-lg"></i>
+          TypeScript
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-tailwindcss-plain colored text-lg"></i>
+          Tailwind CSS
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-jquery-plain colored text-lg"></i>
+          JQuery
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-jquery-plain colored text-lg"></i>
+          JQuery UI
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-react-plain colored text-lg"></i>
+          React
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/supabase.svg" class="h-4 w-4" alt="Supabase">
+          Supabase
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-linux-plain colored text-lg"></i>
+          Linux
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-git-plain colored text-lg"></i>
+          Git
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-amazonwebservices-plain colored text-lg"></i>
+          AWS Lambda
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-amazonwebservices-plain colored text-lg"></i>
+          Amazon S3, EBS & AWS RDS
+        </span>
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <i class="devicon-googlecloud-plain colored text-lg"></i>
+          Google Cloud
+        </span> 
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/googleanalytics.svg" class="h-4 w-4" alt="Google Analytics">
+          Google Analytics
+        </span> 
+        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/odoo.svg" class="h-4 w-4" alt="Odoo">
+          Odoo
+        </span> 
+        </marquee>
+      </div>
+    </div>
+  </section> -->
+  
   <section id="Projects" class=" max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
     <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
@@ -471,6 +736,41 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize vertical swiper
+    const verticalSwiper = new Swiper('.vertical-swiper', {
+      direction: 'vertical',
+      loop: true,
+      slidesPerView: 'auto',
+      freeMode: true,
+      mousewheel: true,
+      autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+      },
+      speed: 2000,
+      spaceBetween: 20,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+    });
+  </script>
+  
+  <style>
+    /* Custom vertical swiper styles */
+    .vertical-swiper .swiper-slide {
+      height: auto !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .vertical-swiper .swiper-wrapper {
+      transition-timing-function: linear;
     }
   </style>
 
