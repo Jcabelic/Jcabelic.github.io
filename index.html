@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -50,693 +50,484 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
-
-<header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"> <!-- Changed max-w-7xl to 5xl -->
-    <h1 class="text-2xl font-bold">Jerson</h1>
-    
-    <!-- Mobile menu toggle -->
-    <button id="menuBtn" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
-      ☰
-    </button>
-
-    <!-- Navigation -->
-    <nav id="navMenu" class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
-      <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
-      <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
-      <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
-      <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
-      <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
-    </nav>
-
-    <!-- Icons -->
-    <div class="hidden md:flex items-center space-x-4">
-      <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
-      <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600">
-        ☀️/🌙
-      </button>
+<!-- Modified Header -->
+<header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition ">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold">Jerson</h1>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
+          <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
+          <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
+          <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+          <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
+          <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
+        </nav>
+        <!-- Desktop Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
+          <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600 flex items-center">
+            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
+            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 4.95l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          </button>
+        </div>
     </div>
-  </div>
-
-  <!-- Enhanced Mobile nav dropdown -->
-  <div id="mobileNav" class="md:hidden px-6 pb-4 hidden flex-col space-y-4 mt-4">
-    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
-      <a href="#About" class="block hover:text-teal-500 dark:hover:text-teal-400">About</a>
-    </div>
-    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
-      <a href="#Proficiencies" class="block hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
-    </div>
-    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
-      <a href="#Projects" class="block hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
-    </div>
-    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
-      <a href="#Endorsements" class="block hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
-    </div>
-    <div class="bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2 text-center">
-      <a href="#Contact" class="block hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
-    </div>
-  </div>
 </header>
-
-<!-- About -->
-<!-- <section id="About" class="pt-16 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
-  <div class="px-6 sm:py-20 py-10">
-    <div class="max-w-screen-xl mx-auto ">
-      <h1 class="text-4xl font-bold text-slate-900 dark:text-white">
-    Hi, I'm Jerson Cabelic
-  </h1>
-  <hr class="w-48 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4">
-  <p class="mt-4 text-gray-700 dark:text-gray-300 text-left">
-  A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
-    
-  </p>
-      <button type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
-        Know more
-      </button>
-    </div>
-  </div>
-</section> -->
-<section class="pt-4 max-w-5xl mx-auto px-6 min-h-screen" data-aos="fade-up">
-  <div class="px-6 sm:py-4 py-2">
-    <div class="max-w-screen-xl mx-auto ">
-      
-      <h1 class="text-4xl font-bold text-slate-900 dark:text-white">
-    Hi, I'm Jerson Cabelic
-  </h1>
-  <hr class="w-48 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4">
-  <p class="mt-4 text-gray-700 dark:text-gray-300 text-left">
-  A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
-    <!-- About me content goes here. -->
-  </p>
-      <button   type="button" class="border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg font-medium tracking-wide px-6 py-2 rounded-md transition duration-200 ease-in-out dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 text-center">
-        Know more
-      </button>
-    </div>
-  </div>
-  <div class="p-4 max-w-6xl mx-auto">
-  <div class="max-w-2xl w-full">
-    <h2 class="text-slate-900 dark:text-white text-2xl font-bold break-words">
-        Endorsed by Professionals Who Rely on Results
-    </h2>
-    <p>
-        Here's what some of our notable clients have to say about the impact of my work on their operations.
-    </p>
-  </div>
-
-  <!-- Carousel Container -->
-  <div class="testimonial-carousel mt-4 gap-4">
-    <div class="gap-4">
-      <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 dark:text-white text-base font-semibold">Management Information System Administrator</h6>
-            <p class="text-xs text-slate-500 dark:text-white mt-1">Lyceum of the Philippines, Batangas</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6 items-center">
-          <h2 class ="text-left">❝</h2>
-          <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center ">
-             His sharp analytical skills and attention to detail are truly impressive.
-          </p>
-          <h2 class ="text-right">❞</h2>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 dark:text-white text-base font-semibold">Payroll Specialist</h6>
-            <p class="text-xs text-slate-500 dark:text-white mt-1">G.A. Jocson</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <h2 class ="text-left">❝</h2>
-          <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
-            Reliable in troubleshooting and has an always willing to help attitude.
-          </p>
-          <h2 class ="text-right">❞</h2>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 dark:text-white text-base font-semibold">IT Director</h6>
-            <p class="text-xs text-slate-500 dark:text-white mt-1">Manila Central University</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <h2 class ="text-left">❝</h2>
-          <p class="text-slate-700 dark:text-white text-base leading-relaxed text-center">
-            Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success.
-          </p>
-          <h2 class ="text-right">❞</h2>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 dark:text-white text-base font-semibold">ERP Operations Officer</h6>
-            <p class="text-xs text-slate-500 dark:text-white mt-1">Philippine Women's University</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <h2 class ="text-left">❝</h2>
-          <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
-            Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated.
-          </p>
-          <h2 class ="text-right">❞</h2>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 dark:text-white text-base font-semibold">System Administrator</h6>
-            <p class="text-xs text-slate-500 dark:text-white mt-1">Colegio San Agustin, Binan</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <h2 class ="text-left">❝</h2>
-          <p class="text-slate-700 dark:text-white text-base leading-relaxed text-center">
-            Takes a while to resolve problems and queries but he communicates when needed.
-          </p>
-          <h2 class ="text-right">❞</h2>
-        </div>
-      </div>
-    </div>
-    <!-- Repeat similar cards -->
-    <!-- ... your other cards ... -->
-  </div>
-</div>
-<style>
-  .slick-slide {
-      margin: 0 10px;
-  }
-</style>
-<!-- Slick Init Script -->
-<script>
-    
-  $(document).ready(function(){
-    $('.testimonial-carousel').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-      arrows: false,
-      centerMode: true,
-      autoplay: true,              // Enable autoplay
-      autoplaySpeed: 3500,         // Delay between slides in ms (3000ms = 3s)
-      
-      centerPadding: '160px', // For large screens
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            centerMode: true,
-            centerPadding: '40px'
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            centerMode: false,
-            centerPadding: '0px'
-          }
-        }
-      ]
-    });
-  });
-</script>
-</section>
-
-
-  <section id="Proficiencies" class=" max-w-5xl mx-auto px-36 h-[60vh]" data-aos="fade-up">
-    
-        <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">Tech Stack</h3>
-      <div class="flex flex-wrap justify-center gap-4">
-        
-        <marquee class="mt-6 text-base font-italic" behavior="scroll" direction="left" scrollamount="10">
-    
-      
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-php-plain colored text-lg">PHP</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-laravel-plain colored text-lg">Laravel</i>
-          </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-mysql-original colored">MySQL</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-postgresql-plain colored">PostgreSQL</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-javascript-plain colored">JavaScript</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-typescript-plain colored">TypeScript</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-tailwindcss-original colored">Tailwind CSS</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-bootstrap-plain colored">Bootstrap</i>
-        </span>
-        
-          
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-jquery-plain-wordmark colored">JQuery</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-react-original colored">React</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-supabase-plain colored">Supabase</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-linux-plain">Linux</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-bash-plain colored">Bash</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-git-plain colored">Git</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-github-original colored">Github</i>
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-amazonwebservices-plain-wordmark colored">Lambda</i>
-         </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-amazonwebservices-plain-wordmark colored">S3, EBS & RDS</i>
-         </span>
-         <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-dynamodb-plain colored">AWS dynamoDB</i>
-         </span>
-         
-          
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">
-          <i class="devicon-amazonwebservices-plain-wordmark colored">Google Cloud</i>
-        </span> 
-        <!-- <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Google Analytics</span> 
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm">Odoo</span>  -->
-        </marquee>
-      </div>
-    </div>
-  </section>
-  <!-- <section id="Proficiencies" class="max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto">
-      <div class="py-8 ">
-        <marquee behavior="scroll" direction="left" scrollamount="10">
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-php-plain colored text-lg"></i>
-          PHP
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-laravel-plain colored text-lg"></i>
-          Laravel
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-mysql-plain colored text-lg"></i>
-          MySQL
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-postgresql-plain colored text-lg"></i>
-          PostgreSQL
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-javascript-plain colored text-lg"></i>
-          JavaScript
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-typescript-plain colored text-lg"></i>
-          TypeScript
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-tailwindcss-plain colored text-lg"></i>
-          Tailwind CSS
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-jquery-plain colored text-lg"></i>
-          JQuery
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-jquery-plain colored text-lg"></i>
-          JQuery UI
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-react-plain colored text-lg"></i>
-          React
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/supabase.svg" class="h-4 w-4" alt="Supabase">
-          Supabase
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-linux-plain colored text-lg"></i>
-          Linux
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-git-plain colored text-lg"></i>
-          Git
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-amazonwebservices-plain colored text-lg"></i>
-          AWS Lambda
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-amazonwebservices-plain colored text-lg"></i>
-          Amazon S3, EBS & AWS RDS
-        </span>
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <i class="devicon-googlecloud-plain colored text-lg"></i>
-          Google Cloud
-        </span> 
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/googleanalytics.svg" class="h-4 w-4" alt="Google Analytics">
-          Google Analytics
-        </span> 
-        <span class="bg-white dark:bg-gray-700 px-4 py-2 rounded-full shadow text-sm flex items-center gap-2">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/odoo.svg" class="h-4 w-4" alt="Odoo">
-          Odoo
-        </span> 
-        </marquee>
-      </div>
-    </div>
-  </section> -->
+<!-- Mobile Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-t-2xl px-2 py-2 flex justify-around md:hidden">
+  <a href="#About" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+    About
+  </a>
+  <a href="#Proficiencies" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    Proficiencies
+  </a>
+  <a href="#Projects" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    Projects
+  </a>
+  <a href="#Endorsements" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75"/></svg>
+    Testimonials
+  </a>
+  <a href="#Contact" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 01-1.9.73 3.48 3.48 0 00-6.1 2.57v.45A8.13 8.13 0 013 6.5s-3 9 9 13a11.64 11.64 0 006-5.5"/></svg>
+    Contact
+  </a>
+  <button id="toggleDarkMobile" class="flex flex-col items-center text-xs font-medium focus:outline-none">
+    <svg id="icon-moon-mobile" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
+    <svg id="icon-sun-mobile" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 4.95l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+    <span class="sr-only">Toggle dark mode</span>
+  </button>
+</nav>
   
-  <section id="Projects" class=" max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
-    <div class="max-w-6xl mx-auto px-6">
-        <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Repeat this block per project -->
-            <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6">
-            <h4 class="text-xl font-semibold mb-2">Employee Payroll System</h4>
-            <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Built with PHP & Supabase | Includes role-based access, geofencing, and CSV import.</p>
-            <a href="#" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">View Project →</a>
+  <!-- Modified About & Testimonials Section -->
+  <section id="About" class="h-screen max-w-7xl mx-auto px-4 py-24 flex flex-col justify-center ">
+    <div class="w-full max-w-[85%] mx-auto"> <!-- 80% width container -->
+      <!-- About Section -->
+      <div class="mb-12 transform " data-aos="fade-right">
+        <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-white translate-y-14 sm:translate-y-0 ">
+          Hi, I'm Jerson Cabelic
+        </h1>
+        <hr class="w-24 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4 translate-y-12 sm:translate-y-0">
+        <p class="mt-4 text-gray-700 dark:text-gray-300 text-justify text-lg leading-relaxed translate-y-8 sm:translate-y-0">
+            A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
+        </p>
+      </div>
+      <div class="max-w-2xl w-full" data-aos="fade-left">
+        <h2 class="text-slate-900 dark:text-white text-2xl font-bold break-words">
+            Endorsed by Professionals Who Rely on Results
+        </h2>
+        <p>
+            Here's what some of our notable clients have to say about the impact of my work on their operations.
+        </p>
+      </div>
+      <!-- Testimonials Carousel -->
+      <div class="w-full max-w-6xl mx-auto" data-aos="fade-left">
+        <div class="testimonial-carousel mt-8">
+         
+        <!-- </div>
+        <div class="testimonial-carousel mt-4 gap-4"> -->
+            <div class="gap-4">
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
+              
+                <div class="flex items-center">
+                  <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+                  <div class="ml-4">
+                    <h6 class="text-slate-900 dark:text-white text-base font-semibold">Management Information System Administrator</h6>
+                    <p class="text-xs text-slate-500 dark:text-white mt-1">Lyceum of the Philippines, Batangas</p>
+                  </div>
+                </div>
+                <hr class="border-2 border-gray-200 rounded-full mt-6">
+                <div class="mt-6 items-center">
+                  <h2 class ="text-left text-2xl">❝</h2>
+                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center ">
+                    His sharp analytical skills and attention to detail are truly impressive.
+                  </p>
+                  <h2 class ="text-right text-2xl">❞</h2>
+                </div>
+              </div>
             </div>
-            <!-- ... Add more project cards -->
-        </div>
-    </div>
-  </section>
-
-  <section id="Endorsements" class=" bg-gray-100 dark:bg-gray-800 h-[100vh]" data-aos="fade-up">
-
-    <!-- <div class="px-4 sm:px-10 mt-20 lg:mt-28">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8 items-start">
-          <div class="col-span-2">
-            <h2 class="md:text-5xl text-3xl font-bold mb-6 text-gray-900">
-              Trusted by Industry Leaders
-            </h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Join with known companies revolutionizing their operations with our platform. 
-              <br>Here's what some of our notable clients have to say about their experience.
-            </p>
-          </div>
-        </div>
+            <div>
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
+                <div class="flex items-center">
+                  <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+                  <div class="ml-4">
+                    <h6 class="text-slate-900 dark:text-white text-lg font-semibold">Payroll Specialist</h6>
+                    <p class="text-xs text-slate-500 dark:text-white mt-1">G.A. Jocson</p>
+                  </div>
+                </div>
+                <hr class="border-2 border-gray-200 rounded-full mt-6">
+                <div class="mt-6">
+                  <h2 class ="text-left text-2xl">❝</h2>
+                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                    Reliable in troubleshooting and has an always willing to help attitude.
+                  </p>
+                  <h2 class ="text-right text-2xl">❞</h2>
+                </div>
+              </div>
+            </div>
     
-        <div class="grid md:grid-cols-3 gap-8 mt-12">
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
-            
-            <p class="mt-6 text-gray-700 leading-relaxed italic">
-              "His sharp analytical skills and attention to detail are truly impressive."
-            </p>
-            <div class="flex items-center">
-              <img src="https://readymadeui.com/team-1.webp" 
-                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
-                   alt="John Doe" />
-              <div class="ml-4">
-                <h4 class="font-bold text-gray-900">Management Information System Administrator</h4>
-                <p class="text-sm text-gray-500 mt-1">LPUB</p>
+            <div>
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-90">
+                <div class="flex items-center">
+                  <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+                  <div class="ml-4">
+                    <h6 class="text-slate-900 dark:text-white text-base font-semibold">IT Director</h6>
+                    <p class="text-xs text-slate-500 dark:text-white mt-1">Manila Central University</p>
+                  </div>
+                </div>
+                <hr class="border-2 border-gray-200 rounded-full mt-6">
+                <div class="mt-6">
+                  <h2 class ="text-left text-2xl">❝</h2>
+                  <p class="text-slate-700 dark:text-white text-base leading-relaxed text-justify">
+                    Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success.
+                  </p>
+                  <h2 class ="text-right text-2xl">❞</h2>
+                </div>
               </div>
             </div>
-          </div>
-    
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
-            
-            <p class="mt-6 text-gray-700 leading-relaxed italic">
-              "Reliable in troubleshooting and has an "always willing to help" attitude."
-            </p>
-            <div class="flex items-center">
-              <img src="https://readymadeui.com/team-2.webp" 
-                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
-                   alt="Mark Adair" />
-              <div class="ml-4">
-                <h4 class="font-bold text-gray-900">Payroll Specialist</h4>
-                <p class="text-sm text-gray-500 mt-1">G.A. Jocson</p>
+            <div>
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
+                <div class="flex items-center">
+                  <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+                  <div class="ml-4">
+                    <h6 class="text-slate-900 dark:text-white text-lg font-semibold">ERP Operations Officer</h6>
+                    <p class="text-xs text-slate-500 dark:text-white mt-1">Philippine Women's University</p>
+                  </div>
+                </div>
+                <hr class="border-2 border-gray-200 rounded-full mt-6">
+                <div class="mt-6">
+                  <h2 class ="text-left text-2xl">❝</h2>
+                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                    Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated.
+                  </p>
+                  <h2 class ="text-right text-2xl">❞</h2>
+                </div>
               </div>
             </div>
-          </div>
-    
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
-            
-            <p class="mt-6 text-gray-700 leading-relaxed italic">
-              "Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success."
-            </p>
-            <div class="flex items-center">
-              <img src="https://readymadeui.com/team-3.webp" 
-                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
-                   alt="Simon Konecki" />
-              <div class="ml-4">
-                <h4 class="font-bold text-gray-900">IT Director</h4>
-                <p class="text-sm text-gray-500 mt-1">MCU</p>
+            <div>
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-72">
+                <div class="flex items-center">
+                  <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
+                  <div class="ml-4">
+                    <h6 class="text-slate-900 dark:text-white text-base font-semibold">System Administrator</h6>
+                    <p class="text-xs text-slate-500 dark:text-white mt-1">Colegio San Agustin, Binan</p>
+                  </div>
+                </div>
+                <hr class="border-2 border-gray-200 rounded-full mt-6">
+                <div class="mt-6">
+                  <h2 class ="text-left text-2xl  ">❝</h2>
+                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                    Takes a while to resolve problems and queries but he communicates when needed.
+                  </p>
+                  <h2 class ="text-right text-2xl">❞</h2>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
-            
-            <p class="mt-6 text-gray-700 leading-relaxed italic">
-              "Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated."
-            </p>
-            <div class="flex items-center">
-              <img src="https://readymadeui.com/team-3.webp" 
-                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
-                   alt="Simon Konecki" />
-              <div class="ml-4">
-                <h4 class="font-bold text-gray-900">ERP Operations Officer</h4>
-                <p class="text-sm text-gray-500 mt-1">PWU</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
-            
-            <p class="mt-6 text-gray-700 leading-relaxed italic">
-              "Takes a while to resolve problems and queries but he communicates when needed."
-            </p>
-            <div class="flex items-center">
-              <img src="https://readymadeui.com/team-3.webp" 
-                   class="w-14 h-14 rounded-full border-2 border-white shadow-md" 
-                   alt="Simon Konecki" />
-              <div class="ml-4">
-                <h4 class="font-bold text-gray-900">System Administrator</h4>
-                <p class="text-sm text-gray-500 mt-1">CSA Binan</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div class="p-4 max-w-6xl mx-auto">
-  <div class="max-w-2xl w-full">
-    <h2 class="text-slate-900 text-2xl font-bold break-words">
-      What our happy clients say
-    </h2>
-    <p class="text-sm text-slate-500 mt-4 leading-relaxed break-words">
-      Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit.
-    </p>
-  </div>
-
-  <!-- Carousel Container -->
-  <div class="testimonial-carousel mt-12">
-    <!-- Repeat testimonial cards -->
-    <div>
-      <div class="testimonial-card border bg-white rounded-xl p-6 max-w-full w-full">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 text-sm font-semibold">John Doe</h6>
-            <p class="text-xs text-slate-500 mt-1">CEO, Company</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <p class="text-slate-700 text-sm leading-relaxed">
-            The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive.
-          </p>
+            <!-- Repeat similar cards -->
         </div>
       </div>
     </div>
-    <div>
-      <div class="testimonial-card border bg-white rounded-xl p-6">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 text-sm font-semibold">Jane Smith</h6>
-            <p class="text-xs text-slate-500 mt-1">CMO, Another Co</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <p class="text-slate-700 text-sm leading-relaxed">
-            I love how quick and efficient the whole process was. A truly professional experience from start to finish.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="testimonial-card border bg-white rounded-xl p-6">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
-            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <p class="text-slate-700 text-sm leading-relaxed">
-            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="testimonial-card border bg-white rounded-xl p-6">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
-            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <p class="text-slate-700 text-sm leading-relaxed">
-            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="testimonial-card border bg-white rounded-xl p-6">
-        <div class="flex items-center">
-          <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
-          <div class="ml-4">
-            <h6 class="text-slate-900 text-sm font-semibold">Alex Johnson</h6>
-            <p class="text-xs text-slate-500 mt-1">Product Manager</p>
-          </div>
-        </div>
-        <hr class="border-2 border-gray-200 rounded-full mt-6">
-        <div class="mt-6">
-          <p class="text-slate-700 text-sm leading-relaxed">
-            The interface is intuitive and the support team was extremely helpful. Definitely recommend!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Repeat similar cards -->
-    <!-- ... your other cards ... -->
-  </div>
-</div>
-
-<!-- Slick Init Script -->
-<script>
-  $(document).ready(function(){
-    $('.testimonial-carousel').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-      arrows: false,
-      centerMode: true,
-      centerPadding: '160px', // For large screens
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            centerMode: true,
-            centerPadding: '40px'
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            centerMode: false,
-            centerPadding: '0px'
-          }
+    <style>
+        .slick-slide {
+            margin: 0 10px;
         }
-      ]
-    });
-  });
-</script>
+      </style>
+      <!-- Slick Init Script -->
+      <script>
+          
+        $(document).ready(function(){
+          $('.testimonial-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            centerMode: true,
+            autoplay: true,              // Enable autoplay
+            autoplaySpeed: 4000,         // Delay between slides in ms (4000ms = 4s)
+            
+            centerPadding: '160px', // For large screens
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  centerMode: true,
+                  centerPadding: '100px'
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  centerMode: false,
+                  centerPadding: '0px'
+                }
+              }
+            ]
+          });
+        });
+      </script>
   </section>
-  <div>
-  <section id="Contact" class="py-16 max-w-5xl mx-auto px-6 h-[100vh]" data-aos="fade-up" >
-    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-    <p>Email me at: <a href="mailto:youremail@example.com" class="text-teal-500">youremail@example.com</a></p>
+  
+  <!-- Modified Proficiencies Section -->
+  <section id="Proficiencies" class="min-h-72 flex items-center justify-center bg-gray-50 dark:bg-gray-800 pb-20 translate-y-12 sm:translate-y-0 " 
+           data-aos="zoom-in" data-aos-offset="50%">
+    <div class="max-w-7xl mx-auto px-4 w-full">
+      <div class="text-center mb-12">
+        <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white translate-y-12 sm:translate-y-8 ">Tech Stack</h3>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto translate-y-12 sm:translate-y-4 ">Technologies and tools I work with to bring ideas to life</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Backend -->
+        <div class="tech-category bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+          <h4 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Backend</h4>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <i class="devicon-php-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">PHP</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-laravel-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Laravel</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-mysql-original colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">MySQL</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-postgresql-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="tech-category bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+          <h4 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Frontend</h4>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <i class="devicon-javascript-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">JavaScript</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-typescript-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">TypeScript</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-react-original colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">React</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-tailwindcss-original colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="tech-category bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+          <h4 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Cloud & DevOps</h4>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <i class="devicon-amazonwebservices-plain-wordmark colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">AWS</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-docker-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Docker</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-git-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Git</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-linux-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="tech-category bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+          <h4 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Tools & Others</h4>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <i class="devicon-github-original colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">GitHub</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-vscode-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">VS Code</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-figma-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Figma</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="devicon-jira-plain colored text-2xl"></i>
+              <span class="text-gray-700 dark:text-gray-300">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="Projects" class="min-h-screen bg-white dark:bg-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Featured Projects</h3>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A showcase of my recent work and personal projects</p>
+      </div>
+
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project cards will be dynamically inserted here -->
+      </div>
+
+      <!-- Project Modal -->
+      <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Project Details</h3>
+            <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          <div id="modal-content" class="space-y-4">
+            <!-- Modal content will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 dark:text-black py-6 bg-gray-900 dark:bg-white text-white dark:text-white-200 font-sans transition-colors duration-300">
-    © 2025 Jerson Cabelic. Built with 💻 and ☕.
-  </footer>
+  <style>
+    /* Custom Styles */
+    .tech-category {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tech-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
-  <!-- Scripts -->
+    .tech-category::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .tech-category:hover::before {
+      transform: translateX(100%);
+    }
+
+    .project-card {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .project-card .project-links {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover .project-links {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tech-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .tech-icon:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+
   <script>
-    // Dark mode
+    // Dark mode toggle with SVG icon swap
     document.getElementById('toggleDark').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
+      const html = document.documentElement;
+      const iconMoon = document.getElementById('icon-moon');
+      const iconSun = document.getElementById('icon-sun');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        iconMoon.classList.add('hidden');
+        iconSun.classList.remove('hidden');
+      } else {
+        iconMoon.classList.remove('hidden');
+        iconSun.classList.add('hidden');
+      }
     });
-
-    // Mobile menu toggle
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.toggle('hidden');
+    // On load, set correct icon
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      const iconMoon = document.getElementById('icon-moon');
+      const iconSun = document.getElementById('icon-sun');
+      if (html.classList.contains('dark')) {
+        iconMoon.classList.add('hidden');
+        iconSun.classList.remove('hidden');
+      } else {
+        iconMoon.classList.remove('hidden');
+        iconSun.classList.add('hidden');
+      }
     });
-
-    // Slick carousel init
-    $(document).ready(function () {
-      $('.testimonial-carousel').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+    // Mobile dark mode toggle
+    document.getElementById('toggleDarkMobile').addEventListener('click', () => {
+      const html = document.documentElement;
+      const iconMoon = document.getElementById('icon-moon-mobile');
+      const iconSun = document.getElementById('icon-sun-mobile');
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        iconMoon.classList.add('hidden');
+        iconSun.classList.remove('hidden');
+      } else {
+        iconMoon.classList.remove('hidden');
+        iconSun.classList.add('hidden');
+      }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      const iconMoon = document.getElementById('icon-moon-mobile');
+      const iconSun = document.getElementById('icon-sun-mobile');
+      if (html.classList.contains('dark')) {
+        iconMoon.classList.add('hidden');
+        iconSun.classList.remove('hidden');
+      } else {
+        iconMoon.classList.remove('hidden');
+        iconSun.classList.add('hidden');
+      }
     });
   </script>
 
@@ -790,5 +581,242 @@
     }
   </style>
 
+  <script>
+    // Projects data
+    const projects = [
+      {
+        id: 1,
+        name: "HRIS System",
+        description: "A comprehensive Human Resource Information System with features for employee management, attendance tracking, and payroll processing.",
+        image: "https://via.placeholder.com/600x400",
+        github: "https://github.com/yourusername/hris",
+        live: "https://hris-demo.example.com",
+        technologies: ["Laravel", "React", "MySQL", "AWS"],
+        features: [
+          "Employee Management",
+          "Attendance Tracking",
+          "Payroll Processing",
+          "Report Generation"
+        ]
+      },
+      {
+        id: 2,
+        name: "Inventory Management System",
+        description: "An enterprise-grade inventory management solution with real-time tracking and automated reordering capabilities.",
+        image: "https://via.placeholder.com/600x400",
+        github: "https://github.com/yourusername/inventory",
+        live: "https://inventory-demo.example.com",
+        technologies: ["PHP", "JavaScript", "PostgreSQL", "Docker"],
+        features: [
+          "Real-time Inventory Tracking",
+          "Automated Reordering",
+          "Supplier Management",
+          "Analytics Dashboard"
+        ]
+      },
+      {
+        id: 3,
+        name: "E-commerce Platform",
+        description: "A modern e-commerce platform with advanced features for product management, order processing, and customer engagement.",
+        image: "https://via.placeholder.com/600x400",
+        github: "https://github.com/yourusername/ecommerce",
+        live: "https://ecommerce-demo.example.com",
+        technologies: ["TypeScript", "React", "Node.js", "MongoDB"],
+        features: [
+          "Product Management",
+          "Shopping Cart",
+          "Payment Integration",
+          "Order Tracking"
+        ]
+      }
+    ];
+
+    // Function to render projects
+    function renderProjects() {
+      const projectsContainer = document.querySelector('#projects-container');
+      if (!projectsContainer) return;
+
+      projectsContainer.innerHTML = projects.map(project => `
+        <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105" data-aos="fade-up">
+          <div class="relative">
+            <img src="${project.image}" alt="${project.name}" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 flex space-x-2 project-links">
+              <a href="${project.github}" target="_blank" class="bg-white dark:bg-gray-700 p-2 rounded-full shadow hover:bg-gray-100 dark:hover:bg-gray-600">
+                <i class="devicon-github-original text-xl"></i>
+              </a>
+              <a href="${project.live}" target="_blank" class="bg-white dark:bg-gray-700 p-2 rounded-full shadow hover:bg-gray-100 dark:hover:bg-gray-600">
+                <i class="fas fa-external-link-alt text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">${project.name}</h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">${project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              ${project.technologies.map(tech => `
+                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300">${tech}</span>
+              `).join('')}
+            </div>
+            <div class="mt-4">
+              <h5 class="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h5>
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                ${project.features.map(feature => `
+                  <li>${feature}</li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Add click event to project cards
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+          if (!e.target.closest('a')) {
+            const projectId = this.dataset.projectId;
+            showProjectDetails(projectId);
+          }
+        });
+      });
+    }
+
+    // Function to show project details in modal
+    function showProjectDetails(projectId) {
+      const project = projects.find(p => p.id === parseInt(projectId));
+      if (!project) return;
+
+      const modal = document.getElementById('project-modal');
+      const modalContent = document.getElementById('modal-content');
+
+      modalContent.innerHTML = `
+        <div class="space-y-4">
+          <img src="${project.image}" alt="${project.name}" class="w-full h-48 object-cover rounded-lg">
+          <h4 class="text-2xl font-bold text-gray-900 dark:text-white">${project.name}</h4>
+          <p class="text-gray-600 dark:text-gray-300">${project.description}</p>
+          <div class="flex flex-wrap gap-2">
+            ${project.technologies.map(tech => `
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300">${tech}</span>
+            `).join('')}
+          </div>
+          <div>
+            <h5 class="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h5>
+            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+              ${project.features.map(feature => `
+                <li>${feature}</li>
+              `).join('')}
+            </ul>
+          </div>
+          <div class="flex justify-end space-x-4">
+            <a href="${project.github}" target="_blank" class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">
+              View on GitHub
+            </a>
+            <a href="${project.live}" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // Close modal when clicking close button or outside modal
+    document.getElementById('close-modal').addEventListener('click', () => {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.getElementById('project-modal').classList.remove('flex');
+    });
+
+    document.getElementById('project-modal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        e.target.classList.add('hidden');
+        e.target.classList.remove('flex');
+      }
+    });
+
+    // Initialize projects when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProjects();
+    });
+  </script>
+
+  <style>
+    .project-card {
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .project-links {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover .project-links {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #project-modal {
+      transition: opacity 0.3s ease;
+    }
+  </style>
+
+  <!-- Add spacing to prevent overlap on mobile -->
+  <style>
+    @media (max-width: 768px) {
+      body { padding-bottom: 4.5rem; }
+      .testimonial-card, .tech-category, .project-card {
+        max-width: 100vw;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      #About, #Proficiencies, #Projects {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .testimonial-carousel {
+        padding-bottom: 1rem;
+      }
+    }
+  </style>
+
+  <!-- Contact Section -->
+<section id="Contact" class="mt-32 px-4 sm:px-10">
+  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-14 px-6 rounded-2xl shadow-lg">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="md:text-4xl text-3xl font-bold mb-6 text-gray-900 dark:text-white">Contact Me</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-8">Have a question, want to collaborate, or just want to say hi? Fill out the form below and I'll get back to you soon!</p>
+      <form class="p-0 flex flex-col gap-4 items-center max-w-xl mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
+        <input type="email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
+        <textarea placeholder="Your Message" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" rows="3" required></textarea>
+        <button type="submit" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold px-8 py-3 rounded transition-all w-full sm:w-auto hover:bg-gray-800 dark:hover:bg-gray-200 border border-gray-900 dark:border-white mt-2">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-gray-900 text-gray-200 py-8 mt-32">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-center md:text-left">
+      <span class="font-bold">Jerson Cabelic</span> &copy; <span id="year"></span>. All rights reserved.
+    </div>
+    <div class="flex space-x-4">
+      <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-400">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-400">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
