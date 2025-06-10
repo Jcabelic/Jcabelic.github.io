@@ -57,9 +57,10 @@
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
           <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
+          <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Endorsements</a>
           <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
           <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
-          <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Testimonials</a>
+          
           <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
         </nav>
         <!-- Desktop Icons -->
@@ -79,6 +80,10 @@
     <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
     About
   </a>
+  <a href="#Endorsements" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
+    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75"/></svg>
+    Endorsements
+  </a>
   <a href="#Proficiencies" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
     <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     Proficiencies
@@ -87,35 +92,28 @@
     <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     Projects
   </a>
-  <a href="#Endorsements" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
-    <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75"/></svg>
-    Testimonials
-  </a>
+  
   <a href="#Contact" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
     <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5a8.38 8.38 0 01-1.9.73 3.48 3.48 0 00-6.1 2.57v.45A8.13 8.13 0 013 6.5s-3 9 9 13a11.64 11.64 0 006-5.5"/></svg>
     Contact
   </a>
-  <button id="toggleDarkMobile" class="flex flex-col items-center text-xs font-medium focus:outline-none">
-    <svg id="icon-moon-mobile" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
-    <svg id="icon-sun-mobile" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 4.95l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-    <span class="sr-only">Toggle dark mode</span>
-  </button>
+  
 </nav>
   
   <!-- Modified About & Testimonials Section -->
-  <section id="About" class="h-screen max-w-7xl mx-auto px-4 py-24 flex flex-col justify-center ">
-    <div class="w-full max-w-[85%] mx-auto"> <!-- 80% width container -->
+  <section  class="h-screen max-w-7xl mx-auto px-4 py-24 flex flex-col justify-center ">
+    <div id="About" class="w-full max-w-[85%] mx-auto"> <!-- 80% width container -->
       <!-- About Section -->
-      <div class="mb-12 transform " data-aos="fade-right">
-        <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-white translate-y-14 sm:translate-y-0 ">
+      <div class="mb-12  " data-aos="fade-right">
+        <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-white transform translate-y-14 sm:translate-y-0 ">
           Hi, I'm Jerson Cabelic
         </h1>
-        <hr class="w-24 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4 translate-y-12 sm:translate-y-0">
-        <p class="mt-4 text-gray-700 dark:text-gray-300 text-justify text-lg leading-relaxed translate-y-8 sm:translate-y-0">
+        <hr class="w-24 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4 transform translate-y-12 sm:translate-y-0 ">
+        <p id="Endorsements" class="mt-4 text-gray-700 dark:text-gray-300 text-justify text-lg leading-relaxed transform translate-y-8 sm:translate-y-0 ">
             A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
         </p>
       </div>
-      <div class="max-w-2xl w-full" data-aos="fade-left">
+      <div  class="max-w-2xl w-full" data-aos="fade-left">
         <h2 class="text-slate-900 dark:text-white text-2xl font-bold break-words">
             Endorsed by Professionals Who Rely on Results
         </h2>
@@ -124,7 +122,7 @@
         </p>
       </div>
       <!-- Testimonials Carousel -->
-      <div class="w-full max-w-6xl mx-auto" data-aos="fade-left">
+      <div   class="w-full max-w-6xl mx-auto" data-aos="fade-left">
         <div class="testimonial-carousel mt-8">
          
         <!-- </div>
@@ -170,7 +168,7 @@
             </div>
     
             <div>
-              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-90">
+              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-90 pb-16 z-9999">
                 <div class="flex items-center">
                   <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
                   <div class="ml-4">
@@ -179,7 +177,7 @@
                   </div>
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
-                <div class="mt-6">
+                <div class="mt-6 ">
                   <h2 class ="text-left text-2xl">❝</h2>
                   <p class="text-slate-700 dark:text-white text-base leading-relaxed text-justify">
                     Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success.
@@ -222,7 +220,7 @@
                   <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
                     Takes a while to resolve problems and queries but he communicates when needed.
                   </p>
-                  <h2 class ="text-right text-2xl">❞</h2>
+                  <h2 id="Proficiencies" class ="text-right text-2xl">❞</h2>
                 </div>
               </div>
             </div>
@@ -273,12 +271,12 @@
   </section>
   
   <!-- Modified Proficiencies Section -->
-  <section id="Proficiencies" class="min-h-72 flex items-center justify-center bg-gray-50 dark:bg-gray-800 pb-20 translate-y-12 sm:translate-y-0 " 
-           data-aos="zoom-in" data-aos-offset="50%">
+  <section class="min-h-72 flex items-center justify-center bg-gray-50 dark:bg-gray-800 pb-20 translate-y-12 sm:translate-y-0 " 
+           data-aos="zoom-in" data-aos-offset="20%">
     <div class="max-w-7xl mx-auto px-4 w-full">
       <div class="text-center mb-12">
-        <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white translate-y-12 sm:translate-y-8 ">Tech Stack</h3>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto translate-y-12 sm:translate-y-4 ">Technologies and tools I work with to bring ideas to life</p>
+        <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white transform translate-y-12 sm:translate-y-8 ">Tech Stack</h3>
+        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transform translate-y-12 sm:translate-y-4 ">Technologies and tools I work with to bring ideas to life</p>
       </div>
       
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
