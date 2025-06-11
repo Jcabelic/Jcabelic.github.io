@@ -1,5 +1,4 @@
-
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,29 +50,39 @@
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
 <!-- Modified Header -->
-<header class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition ">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center mb-8">
+<header id="main-header" class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50 transition-all duration-300">
+    <!-- <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center mb-8">
         <h1 class="text-2xl font-bold">Jerson</h1>
-        <!-- Desktop Navigation -->
+        
         <nav class="hidden md:flex md:space-x-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-full px-6 py-2">
           <a href="#About" class="hover:text-teal-500 dark:hover:text-teal-400">About</a>
           <a href="#Endorsements" class="hover:text-teal-500 dark:hover:text-teal-400">Endorsements</a>
           <a href="#Proficiencies" class="hover:text-teal-500 dark:hover:text-teal-400">Proficiencies</a>
           <a href="#Projects" class="hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
-          
           <a href="#Contact" class="hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
         </nav>
-        <!-- Desktop Icons -->
-        <div class="flex items-center space-x-4">
-          <a href="https://github.com/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
-          <button id="toggleDark" class="text-sm px-2 py-1 rounded border border-gray-400 dark:border-gray-600 flex items-center">
-            <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
-            <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 4.95l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-          </button>
-        </div>
-    </div>
+        </div> -->
 </header>
+
+<!-- Floating Navigation Island (Desktop Only) -->
+<div id="nav-island" class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-40 bg-zinc-800/90 dark:bg-zinc-900/90 shadow-lg ring-1 ring-white/10 rounded-full px-8 py-3 items-center gap-6 transition-all duration-300 opacity-0 pointer-events-none">
+  <nav class="flex gap-8">
+    <a href="#About" class="text-white hover:text-teal-400 font-medium">About</a>
+    <a href="#Endorsements" class="text-white hover:text-teal-400 font-medium">Endorsements</a>
+    <a href="#Proficiencies" class="text-white hover:text-teal-400 font-medium">Proficiencies</a>
+    <a href="#Projects" class="text-white hover:text-teal-400 font-medium">Projects</a>
+    <a href="#Contact" class="text-white hover:text-teal-400 font-medium">Contact</a>
+            </nav>
+          </div>
+
+<!-- Floating Action Icons (Top Right) -->
+<div id="floating-actions" class="hidden md:flex fixed top-6 right-8 z-50 bg-zinc-800/90 dark:bg-zinc-900/90 shadow-lg ring-1 ring-white/10 rounded-full px-4 py-2 items-center gap-2 transition-all duration-300">
+  <button id="toggleDarkIsland" class="ml-2 border border-gray-600 rounded-full p-2 flex items-center justify-center bg-zinc-900" title="Toggle dark mode">
+    <svg id="icon-moon-island" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
+    <svg id="icon-sun-island" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 4.95l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+  </button>
+</div>
+
 <!-- Mobile Bottom Navigation -->
 <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm shadow ring-1 ring-zinc-900/5 dark:ring-white/10 rounded-t-2xl px-2 py-2 flex justify-around md:hidden">
   <a href="#About" class="flex flex-col items-center text-xs font-medium hover:text-teal-500 dark:hover:text-teal-400">
@@ -101,28 +110,50 @@
 </nav>
   
   <!-- Modified About & Testimonials Section -->
-  <section  class="h-screen max-w-7xl mx-auto px-4 py-24 flex flex-col justify-center ">
-    <div id="About" class="w-full max-w-[85%] mx-auto"> <!-- 80% width container -->
+  <section id="About" class="w-full flex flex-col items-center justify-center pt-24 pb-20">
+    <!-- <div class="max-w-3xl w-full mx-auto text-center">
+      <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">Hi, I'm Jerson Cabelic</h1>
+      <hr class="w-24 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4 mx-auto">
+      <p class="mt-4 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+        A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
+      </p>
+    </div> -->
+    <div id="About" class="w-full max-w-[75%] mx-auto"> <!-- 80% width container -->
       <!-- About Section -->
       <div class="mb-12  " data-aos="fade-right">
         <h1 class="text-3xl sm:text-5xl font-bold text-slate-900 dark:text-white transform translate-y-14 sm:translate-y-0 ">
           Hi, I'm Jerson Cabelic
         </h1>
         <hr class="w-24 h-1 bg-[#111827] dark:bg-white border-0 rounded-full my-4 transform translate-y-12 sm:translate-y-0 ">
-        <p id="Endorsements" class="mt-4 text-gray-700 dark:text-gray-300 text-justify text-lg leading-relaxed transform translate-y-8 sm:translate-y-0 ">
+        <p  class="mt-4 text-gray-700 dark:text-gray-300 text-justify text-lg leading-relaxed transform translate-y-8 sm:translate-y-0 ">
             A licensed Engineer with a strong passion for software development. I specialize in designing and building scalable, enterprise-grade systems that solve real-world business problems. With a focus on clean architecture and performance, I aim to deliver robust solutions that empower organizations and streamline operations. Currently exploring cloud technologies to further enhance system efficiency and integration.
         </p>
       </div>
-      <div  class="max-w-2xl w-full" data-aos="fade-left">
+  </section>
+
+  <section id="Endorsements" class="w-full flex flex-col items-center justify-center py-20">
+    <!-- <div  class="max-w-2xl w-full" data-aos="fade-left">
         <h2 class="text-slate-900 dark:text-white text-2xl font-bold break-words">
             Endorsed by Professionals Who Rely on Results
         </h2>
         <p>
             Here's what some of our notable clients have to say about the impact of my work on their operations.
         </p>
-      </div>
+    </div> -->
+    <!-- <div class="max-w-2xl w-full mx-auto text-center mb-8">
+      <h2 class="text-lg sm:text-4xl font-bold text-slate-900 dark:text-white mb-2 w-full">
+        Endorsed by Professionals <span class="block md:inline">Who Rely on Results</span>
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">Here's what some of our notable clients have to say about the impact of my work on their operations.</p>
+    </div> -->
+    <div class="max-w-4xl w-full mx-auto text-center mb-8">
+      <h2 class="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">
+        Endorsed by Professionals <span class="block sm:inline">Who Rely on Results</span>
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 text-sm">Here's what some of our notable clients have to say about the impact of my work on their operations.</p>
+    </div>
       <!-- Testimonials Carousel -->
-      <div   class="w-full max-w-6xl mx-auto" data-aos="fade-left">
+    <div   class="w-full max-w-6xl mx-auto" data-aos="fade-left">
         <div class="testimonial-carousel mt-8">
          
         <!-- </div>
@@ -139,12 +170,12 @@
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
                 <div class="mt-6 items-center">
-                  <h2 class ="text-left text-2xl">❝</h2>
-                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center ">
+                <h2 class ="text-left text-2xl">❝</h2>
+                <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center ">
                     His sharp analytical skills and attention to detail are truly impressive.
                   </p>
-                  <h2 class ="text-right text-2xl">❞</h2>
-                </div>
+                <h2 class ="text-right text-2xl">❞</h2>
+              </div>
               </div>
             </div>
             <div>
@@ -152,23 +183,23 @@
                 <div class="flex items-center">
                   <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
                   <div class="ml-4">
-                    <h6 class="text-slate-900 dark:text-white text-lg font-semibold">Payroll Specialist</h6>
+                  <h6 class="text-slate-900 dark:text-white text-lg font-semibold">Payroll Specialist</h6>
                     <p class="text-xs text-slate-500 dark:text-white mt-1">G.A. Jocson</p>
                   </div>
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
                 <div class="mt-6">
-                  <h2 class ="text-left text-2xl">❝</h2>
-                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                <h2 class ="text-left text-2xl">❝</h2>
+                <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
                     Reliable in troubleshooting and has an always willing to help attitude.
                   </p>
-                  <h2 class ="text-right text-2xl">❞</h2>
-                </div>
+                <h2 class ="text-right text-2xl">❞</h2>
+              </div>
               </div>
             </div>
     
             <div>
-              <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-90 pb-16 z-9999">
+            <div class="testimonial-card border bg-white dark:bg-[#111827] rounded-xl p-3 max-w-full w-full min-h-90 pb-16 z-9999">
                 <div class="flex items-center">
                   <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
                   <div class="ml-4">
@@ -177,13 +208,13 @@
                   </div>
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
-                <div class="mt-6 ">
-                  <h2 class ="text-left text-2xl">❝</h2>
+              <div class="mt-6 ">
+                <h2 class ="text-left text-2xl">❝</h2>
                   <p class="text-slate-700 dark:text-white text-base leading-relaxed text-justify">
                     Jerson played a key role in developing and implementing the HRIS, providing effective solutions for the Daily Accomplishment Report (DAR) and Payroll Processes. His technical expertise and problem-solving skills were valuable to deliver reliable solutions that contributed to the project's success.
                   </p>
-                  <h2 class ="text-right text-2xl">❞</h2>
-                </div>
+                <h2 class ="text-right text-2xl">❞</h2>
+              </div>
               </div>
             </div>
             <div>
@@ -191,18 +222,18 @@
                 <div class="flex items-center">
                   <img src="https://readymadeui.com/team-1.webp" class="w-14 h-14 rounded-full border border-purple-600" alt="Profile Picture">
                   <div class="ml-4">
-                    <h6 class="text-slate-900 dark:text-white text-lg font-semibold">ERP Operations Officer</h6>
+                  <h6 class="text-slate-900 dark:text-white text-lg font-semibold">ERP Operations Officer</h6>
                     <p class="text-xs text-slate-500 dark:text-white mt-1">Philippine Women's University</p>
                   </div>
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
                 <div class="mt-6">
-                  <h2 class ="text-left text-2xl">❝</h2>
-                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                <h2 class ="text-left text-2xl">❝</h2>
+                <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
                     Your efforts in our Accounting unit and report hierarchy mapping, greatly appreciated.
                   </p>
-                  <h2 class ="text-right text-2xl">❞</h2>
-                </div>
+                <h2 class ="text-right text-2xl">❞</h2>
+              </div>
               </div>
             </div>
             <div>
@@ -216,12 +247,12 @@
                 </div>
                 <hr class="border-2 border-gray-200 rounded-full mt-6">
                 <div class="mt-6">
-                  <h2 class ="text-left text-2xl  ">❝</h2>
-                  <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
+                <h2 class ="text-left text-2xl  ">❝</h2>
+                <p class="text-slate-700 dark:text-white text-lg leading-relaxed text-center">
                     Takes a while to resolve problems and queries but he communicates when needed.
                   </p>
-                  <h2 id="Proficiencies" class ="text-right text-2xl">❞</h2>
-                </div>
+                <h2  class ="text-right text-2xl">❞</h2>
+              </div>
               </div>
             </div>
             <!-- Repeat similar cards -->
@@ -244,7 +275,7 @@
             arrows: false,
             centerMode: true,
             autoplay: true,              // Enable autoplay
-            autoplaySpeed: 4000,         // Delay between slides in ms (4000ms = 4s)
+          autoplaySpeed: 4000,         // Delay between slides in ms (4000ms = 4s)
             
             centerPadding: '160px', // For large screens
             responsive: [
@@ -253,7 +284,7 @@
                 settings: {
                   slidesToShow: 2,
                   centerMode: true,
-                  centerPadding: '100px'
+                centerPadding: '100px'
                 }
               },
               {
@@ -271,8 +302,7 @@
   </section>
   
   <!-- Modified Proficiencies Section -->
-  <section class="min-h-72 flex items-center justify-center bg-gray-50 dark:bg-gray-800 pb-20 translate-y-12 sm:translate-y-0 " 
-           data-aos="zoom-in" data-aos-offset="20%">
+  <section id="Proficiencies" class="w-full flex flex-col items-center justify-center py-20 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 w-full">
       <div class="text-center mb-12">
         <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white transform translate-y-12 sm:translate-y-8 ">Tech Stack</h3>
@@ -376,17 +406,13 @@
   </section>
   
   <!-- Projects Section -->
-  <section id="Projects" class="min-h-screen bg-white dark:bg-gray-900 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Featured Projects</h3>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A showcase of my recent work and personal projects</p>
+  <section id="Projects" class="w-full flex flex-col items-center justify-center py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl w-full mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Featured Projects</h3>
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A showcase of my recent work and personal projects</p>
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <!-- Project cards will be dynamically inserted here, no data-aos -->
       </div>
-
-      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project cards will be dynamically inserted here -->
-      </div>
-
       <!-- Project Modal -->
       <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
         <div class="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4">
@@ -403,7 +429,7 @@
       </div>
     </div>
   </section>
-
+  
   <style>
     /* Custom Styles */
     .tech-category {
@@ -448,7 +474,7 @@
       transform: translateY(10px);
       transition: all 0.3s ease;
     }
-
+  
     .project-card:hover .project-links {
       opacity: 1;
       transform: translateY(0);
@@ -472,7 +498,7 @@
       animation: float 3s ease-in-out infinite;
     }
   </style>
-
+  
   <script>
     // Dark mode toggle with SVG icon swap
     document.getElementById('toggleDark').addEventListener('click', () => {
@@ -635,7 +661,7 @@
       if (!projectsContainer) return;
 
       projectsContainer.innerHTML = projects.map(project => `
-        <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105" data-aos="fade-up">
+        <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
           <div class="relative">
             <img src="${project.image}" alt="${project.name}" class="w-full h-48 object-cover">
             <div class="absolute top-4 right-4 flex space-x-2 project-links">
@@ -647,17 +673,42 @@
               </a>
             </div>
           </div>
-          <div class="p-6">
+          <div class="p-6 flex flex-col items-center justify-center text-center">
             <h4 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">${project.name}</h4>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">${project.description}</p>
-            <div class="flex flex-wrap gap-2">
-              ${project.technologies.map(tech => `
-                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300">${tech}</span>
-              `).join('')}
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-center">${project.description}</p>
+            <div class="flex flex-wrap gap-3 justify-center mb-4">
+              ${project.technologies.map(tech => {
+                const deviconMap = {
+                  'PHP': 'devicon-php-plain colored',
+                  'Laravel': 'devicon-laravel-plain colored',
+                  'MySQL': 'devicon-mysql-original colored',
+                  'PostgreSQL': 'devicon-postgresql-plain colored',
+                  'JavaScript': 'devicon-javascript-plain colored',
+                  'TypeScript': 'devicon-typescript-plain colored',
+                  'React': 'devicon-react-original colored',
+                  'Tailwind CSS': 'devicon-tailwindcss-original colored',
+                  'Bootstrap': 'devicon-bootstrap-plain colored',
+                  'JQuery': 'devicon-jquery-plain-wordmark colored',
+                  'Supabase': 'devicon-supabase-plain colored',
+                  'Linux': 'devicon-linux-plain',
+                  'Bash': 'devicon-bash-plain colored',
+                  'Git': 'devicon-git-plain colored',
+                  'Github': 'devicon-github-original colored',
+                  'AWS': 'devicon-amazonwebservices-plain-wordmark colored',
+                  'Docker': 'devicon-docker-plain colored',
+                  'Node.js': 'devicon-nodejs-plain colored',
+                  'MongoDB': 'devicon-mongodb-plain colored',
+                  'Figma': 'devicon-figma-plain colored',
+                  'Jira': 'devicon-jira-plain colored',
+                  // Add more mappings as needed
+                };
+                const iconClass = deviconMap[tech] || '';
+                return `<span class='rounded-full bg-gray-100 dark:bg-gray-700 p-2 flex items-center justify-center' title='${tech}'><i class='${iconClass} text-2xl'></i></span>`;
+              }).join('')}
             </div>
-            <div class="mt-4">
+            <div class="mt-4 flex flex-col items-center justify-center">
               <h5 class="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h5>
-              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+              <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 text-left mx-auto" style="max-width: 150%;">
                 ${project.features.map(feature => `
                   <li>${feature}</li>
                 `).join('')}
@@ -692,9 +743,34 @@
           <h4 class="text-2xl font-bold text-gray-900 dark:text-white">${project.name}</h4>
           <p class="text-gray-600 dark:text-gray-300">${project.description}</p>
           <div class="flex flex-wrap gap-2">
-            ${project.technologies.map(tech => `
-              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300">${tech}</span>
-            `).join('')}
+            ${project.technologies.map(tech => {
+              const deviconMap = {
+                'PHP': 'devicon-php-plain colored',
+                'Laravel': 'devicon-laravel-plain colored',
+                'MySQL': 'devicon-mysql-original colored',
+                'PostgreSQL': 'devicon-postgresql-plain colored',
+                'JavaScript': 'devicon-javascript-plain colored',
+                'TypeScript': 'devicon-typescript-plain colored',
+                'React': 'devicon-react-original colored',
+                'Tailwind CSS': 'devicon-tailwindcss-original colored',
+                'Bootstrap': 'devicon-bootstrap-plain colored',
+                'JQuery': 'devicon-jquery-plain-wordmark colored',
+                'Supabase': 'devicon-supabase-plain colored',
+                'Linux': 'devicon-linux-plain',
+                'Bash': 'devicon-bash-plain colored',
+                'Git': 'devicon-git-plain colored',
+                'Github': 'devicon-github-original colored',
+                'AWS': 'devicon-amazonwebservices-plain-wordmark colored',
+                'Docker': 'devicon-docker-plain colored',
+                'Node.js': 'devicon-nodejs-plain colored',
+                'MongoDB': 'devicon-mongodb-plain colored',
+                'Figma': 'devicon-figma-plain colored',
+                'Jira': 'devicon-jira-plain colored',
+                // Add more mappings as needed
+              };
+              const iconClass = deviconMap[tech] || '';
+              return `<span class="flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300"><i class='${iconClass} text-lg'></i>${tech}</span>`;
+            }).join('')}
           </div>
           <div>
             <h5 class="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h5>
@@ -785,20 +861,18 @@
   </style>
 
   <!-- Contact Section -->
-<section id="Contact" class="mt-32 px-4 sm:px-10">
-  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-14 px-6 rounded-2xl shadow-lg">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="md:text-4xl text-3xl font-bold mb-6 text-gray-900 dark:text-white">Contact Me</h2>
-      <p class="text-gray-600 dark:text-gray-300 mb-8">Have a question, want to collaborate, or just want to say hi? Fill out the form below and I'll get back to you soon!</p>
-      <form class="p-0 flex flex-col gap-4 items-center max-w-xl mx-auto">
-        <input type="text" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
-        <input type="email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
-        <textarea placeholder="Your Message" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" rows="3" required></textarea>
-        <button type="submit" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold px-8 py-3 rounded transition-all w-full sm:w-auto hover:bg-gray-800 dark:hover:bg-gray-200 border border-gray-900 dark:border-white mt-2">
-          Send Message
-        </button>
-      </form>
-    </div>
+<section id="Contact" class="w-full flex flex-col items-center justify-center py-20">
+  <div class="max-w-3xl w-full mx-auto text-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-14 px-6 rounded-2xl shadow-lg">
+    <h2 class="md:text-4xl text-3xl font-bold mb-6 text-gray-900 dark:text-white">Contact Me</h2>
+    <p class="text-gray-600 dark:text-gray-300 mb-8">Have a question, want to collaborate, or just want to say hi? Fill out the form below and I'll get back to you soon!</p>
+    <form class="p-0 flex flex-col gap-4 items-center max-w-xl mx-auto">
+      <input type="text" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
+      <input type="email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" required />
+      <textarea placeholder="Your Message" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 px-4 text-base rounded focus:outline-none text-gray-900 dark:text-white" rows="3" required></textarea>
+      <button type="submit" class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold px-8 py-3 rounded transition-all w-full sm:w-auto hover:bg-gray-800 dark:hover:bg-gray-200 border border-gray-900 dark:border-white mt-2">
+        Send Message
+      </button>
+    </form>
   </div>
 </section>
 <!-- Footer -->
@@ -815,6 +889,82 @@
 </footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<style>
+#nav-island, #floating-actions {
+  transition: opacity 0.3s, pointer-events 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(8px);
+}
+header {
+  transition: transform 0.3s, opacity 0.3s;
+}
+#floating-actions a, #floating-actions button {
+  outline: none;
+  border: none;
+  background: none;
+}
+#floating-actions a:focus, #floating-actions button:focus {
+  box-shadow: 0 0 0 2px #38bdf8;
+}
+</style>
+
+<script>
+// Show/hide header and nav island on scroll
+let lastScrollY = window.scrollY;
+const header = document.getElementById('main-header');
+const navIsland = document.getElementById('nav-island');
+const floatingActions = document.getElementById('floating-actions');
+function handleScroll() {
+  if (window.scrollY < 10) {
+    header.style.transform = 'translateY(0)';
+    header.style.opacity = '1';
+    navIsland.classList.add('opacity-0', 'pointer-events-none');
+    navIsland.classList.remove('opacity-100', 'pointer-events-auto');
+    floatingActions.classList.add('opacity-0', 'pointer-events-none');
+    floatingActions.classList.remove('opacity-100', 'pointer-events-auto');
+  } else {
+    header.style.transform = 'translateY(-100%)';
+    header.style.opacity = '0';
+    navIsland.classList.remove('opacity-0', 'pointer-events-none');
+    navIsland.classList.add('opacity-100', 'pointer-events-auto');
+    floatingActions.classList.remove('opacity-0', 'pointer-events-none');
+    floatingActions.classList.add('opacity-100', 'pointer-events-auto');
+  }
+}
+window.addEventListener('scroll', handleScroll);
+document.addEventListener('DOMContentLoaded', handleScroll);
+
+// Dark mode toggle for floating actions
+const toggleDarkIsland = document.getElementById('toggleDarkIsland');
+toggleDarkIsland.addEventListener('click', () => {
+  const html = document.documentElement;
+  const iconMoon = document.getElementById('icon-moon-island');
+  const iconSun = document.getElementById('icon-sun-island');
+  html.classList.toggle('dark');
+  if (html.classList.contains('dark')) {
+    iconMoon.classList.add('hidden');
+    iconSun.classList.remove('hidden');
+  } else {
+    iconMoon.classList.remove('hidden');
+    iconSun.classList.add('hidden');
+  }
+});
+// Set correct icon on load
+function setIslandIcon() {
+  const html = document.documentElement;
+  const iconMoon = document.getElementById('icon-moon-island');
+  const iconSun = document.getElementById('icon-sun-island');
+  if (html.classList.contains('dark')) {
+    iconMoon.classList.add('hidden');
+    iconSun.classList.remove('hidden');
+  } else {
+    iconMoon.classList.remove('hidden');
+    iconSun.classList.add('hidden');
+  }
+}
+document.addEventListener('DOMContentLoaded', setIslandIcon);
 </script>
 </body>
 </html>
